@@ -17,7 +17,7 @@ To write a PYTHON program for socket for HTTP for web page upload and download
 <BR>
 ## Program :
 ```
-import socket
+ import socket
 
 def send_request(host, port, request):
     with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
@@ -30,8 +30,7 @@ def upload_file(host, port, filename):
     with open(filename, 'rb') as file:
         file_data = file.read()
         content_length = len(file_data)
-        request = f"POST /upload HTTP/1.1\r\nHost: {host}\r\nContent-Length:
-{content_length}\r\n\r\n{file_data.decode()}"
+        request = f"POST /upload HTTP/1.1\r\nHost: {host}\r\nContent-Length: {content_length}\r\n\r\n{file_data.decode()}"
         response = send_request(host, port, request)
     return response
 
@@ -56,7 +55,7 @@ if __name__ == "__main__":
     print("File downloaded successfully.")
 ```
 ## OUTPUT:
-![image](https://github.com/23002027/5a_Create_Socket_for_HTTP_for_webpage_upload_and_download/assets/139752981/41ca01d4-365c-4a60-b674-818580b65b2c)
+![Screenshot 2024-04-25 005621](https://github.com/jayaseelan2006/5a_Create_Socket_for_HTTP_for_webpage_upload_and_download/assets/151389443/00b733ae-6cb4-4ace-a256-ca51e077d9d9)
 
 ## Result
 Thus the socket for HTTP for web page upload and download created and Executed
